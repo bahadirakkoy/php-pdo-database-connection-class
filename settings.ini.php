@@ -3,4 +3,4 @@
 host = localhost
 user = root
 password = root
-dbname = bilsemteknik
+dbname = test
