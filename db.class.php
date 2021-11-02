@@ -14,10 +14,8 @@ if(@$_SESSION["debug"]=="true"){
 }
 
 foreach ($_POST as $key => $value) {
-    if($key != "g-recaptcha-response" && !is_array($_POST[$key])){
-        $_POST[$key] = preg_replace("/[^A-Za-z0-9ĞÇŞÜİÖğçşüöı .,_\-\/@]/", "", $value);
+	$_POST[$key] = preg_replace("/[^A-Za-z0-9ĞÇŞÜİÖğçşüöı .,_\-\/@]/", "", $value);
         $_SESSION[$key] = preg_replace("/[^A-Za-z0-9ĞÇŞÜİÖğçşüöı .,_\-\/@]/", "", $value);
-    }
 }
 
 foreach ($_GET as $key => $value) {
